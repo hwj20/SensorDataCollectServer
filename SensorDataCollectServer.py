@@ -1,9 +1,7 @@
-import os
 
 from flask import Flask, request, flash, url_for, Response
 import pprint
 
-from werkzeug.utils import redirect, secure_filename
 
 UPLOAD_FOLDER = ''
 IP_ADDRESS = '0.0.0.0'
