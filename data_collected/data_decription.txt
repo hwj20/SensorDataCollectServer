@@ -1,0 +1,15 @@
+csv column names:
+type, millis, sensor_x, sensor_y, sensor_z
+
+
+type:
+10 ------- TYPE_LINEAR_ACCELERATION
+4 ------- TYPE_GYROSCOPE
+
+millis:
+the number of milliseconds between the current computer time and GMT (Greenwich mean time) at 0:00:00 on January 1, 1970
+
+sensor_x, sensor_y, sensor_z:
+raw data collected by android device.
+
+For more details about type and sensor values, please refer to https://developer.android.com/guide/topics/sensors/sensors_motion?hl=zh-cn
