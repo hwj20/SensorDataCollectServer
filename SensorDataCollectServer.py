@@ -6,6 +6,8 @@ import pprint
 from werkzeug.utils import redirect, secure_filename
 
 UPLOAD_FOLDER = ''
+IP_ADDRESS = '0.0.0.0'
+PORT = 8000
 app = Flask(__name__)
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 
@@ -38,9 +40,8 @@ def result():
 
 data_filename = './data_collected/data.csv'
 data_file = open(data_filename, 'a')
-if __name__ == '__main__':
-    app.wsgi_app = LoggingMiddleware(app.wsgi_app)
-    # app.run(host='192.168.1.109', port=8000)
-    app.run(host='10.252.135.198', port=8000, debug=True)
 
-    data_file.close()
+app.wsgi_app = LoggingMiddleware(app.wsgi_app)
+app.run(host=IP_ADDRESS, port=PORT, debug=True)
+
+data_file.close()
