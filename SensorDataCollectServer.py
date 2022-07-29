@@ -31,7 +31,8 @@ class LoggingMiddleware(object):
 def result():
     data = request.get_data()
     data = bytes.decode(data)
-    print(data)
+    if len(data.split(',')) != 5:
+        return Response("{\"error\":\"wrong format\"}", status=400, mimetype='application/json')
     data_file.write(data)
     data_file.flush()
 

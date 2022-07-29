@@ -9,4 +9,7 @@ run the command
 python SensorDataCollectServer.py
 ``
 
-if needed, replace the IP_ADDRESS and PORT in SensorDataCollectServer.py
+if needed, replace the IP_ADDRESS and PORT in _SensorDataCollectServer.py_
+
+##More Details
+about **dataset**: refer to _./data_collected/data_description.txt_
